@@ -5,6 +5,7 @@ export default function RootLayout({children}){
     <html>
         <body>
             <h1>Root layout for Admin.</h1>
+            {children}
         </body>
     </html>
   )
