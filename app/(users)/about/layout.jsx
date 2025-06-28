@@ -1,12 +1,10 @@
-import React from 'react'
-
-const layout = ({children}) => {
-  return (
-    <div>
-        Know about us.
-        {children}
-    </div>
-  )
+export default function AboutLayout({children}){
+    return(
+        <html>
+            <body>
+                <h2>Hello from saperated About page in route. </h2>
+                {children}
+            </body>
+        </html>
+    )
 }
-
-export default layout
