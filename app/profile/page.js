@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-        <h1>Admin About page is here.</h1>
+        <h1>This is my Profile.</h1>
         <button>
           <Link href="/">Go To Home</Link>
         </button>

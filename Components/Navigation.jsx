@@ -27,6 +27,9 @@ const Navigation = () => {
               <li>
                 <Link href="/services">Services</Link>
               </li>
+              <li>
+                <Link href="/profile">Profile</Link>
+              </li>
               <li className="ml-5">
                 <button className="px-3 py-1.5 rounded-lg bg-orange-600">
                   Get Started
