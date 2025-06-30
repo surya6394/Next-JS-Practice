@@ -1,9 +1,12 @@
+import Cards from "../../Components/Cards";
+
 export default function Home() {
   return (
     <>
       <div>
         <h1>Welcome to Next JS course with Surya.</h1>
       </div>
+      <Cards />
     </>
   );
 }
