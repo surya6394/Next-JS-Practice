@@ -1,6 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 import img from '../public/self-2.jpg';
+import { Roboto, Work_Sans } from 'next/font/google';
+
+const roboto = Roboto({
+    subsets: ['latin']
+})
+
+const workSans = Work_Sans({
+    subsets: ['latin']
+})
 
 const Cards = () => {
 
@@ -24,7 +33,21 @@ const Cards = () => {
 
     return (
         <>
-            <div className='grid grid-cols-3 mx-10 gap-10 mt-16'>
+            <div className={`grid grid-cols-3 mx-10 gap-10 mt-16 ${roboto.className}`}>
+                {data.map((item, index) => (
+                    <div key={index} className='bg-amber-100 text-black border-[1.5px] rounded p-10 text-center'>
+                        <div className='flex justify-center items-center'>
+                            <Image src={item.image} height={100} width={100} alt='Profile picture is not available' />
+                        </div>
+                        <div>
+                            <h1>{item.name}</h1>
+                            <p>{item.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className={`grid grid-cols-3 mx-10 gap-10 mt-16 ${workSans.className}`}>
                 {data.map((item, index) => (
                     <div key={index} className='bg-amber-100 text-black border-[1.5px] rounded p-10 text-center'>
                         <div className='flex justify-center items-center'>
@@ -39,7 +62,7 @@ const Cards = () => {
             </div>
 
 
-            <div className='grid grid-cols-3 mx-10 gap-10 my-16'>
+            <div className={`grid grid-cols-3 mx-10 gap-10 my-16 ${workSans.className}`}>
                 {data.map((item, index) => (
                     <div key={index} className='relative bg-amber-100 text-black border-[1.5px] rounded p-10 text-center'>
                         <div className='flex justify-center items-center'>
@@ -80,7 +103,7 @@ const Cards = () => {
                     </div>
                 ))}
             </div>
-                <h1 className='text-center text-6xl'>Image Blur methods.</h1>
+            <h1 className='text-center text-6xl'>Image Blur methods.</h1>
             <div className='grid grid-cols-3 mx-10 gap-10 my-16'>
                 {data.map((item, index) => (
                     <div key={index} className='relative bg-amber-100 text-black border-[1.5px] rounded p-10 text-center'>
