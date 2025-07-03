@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>Admin Pages</div>
+    <div className='font-roboto'>Admin Pages</div>
   )
 }
 
